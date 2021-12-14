@@ -23,10 +23,8 @@ def aggregate_date_time(values):
         hour = 0
     return datetime.datetime(year, month, day, hour, minutes)
 
-
 def aggregate_time_in_minutes(dateTime):
     return dateTime.hour*60 + dateTime.minute
-
 
 def preprocessing(x):
     x['scheduled_departure_date_time'] = x[['YEAR', 'MONTH', 'DAY',
