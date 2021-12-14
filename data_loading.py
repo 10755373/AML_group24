@@ -11,4 +11,10 @@ def load_data(test_file_path = './flights_test.csv', training_file_path = './fli
     flights_train = preprocessing(flights_train)
     flights_test = preprocessing(flights_test)
 
+    for category in flights_train.columns[flights_train.dtypes=='object']:
+      flights_train[category] = pd.Categorical(flights_train[category])
+
+    for category in flights_test.columns[flights_test.dtypes=='object']:
+      flights_test[category] = pd.Categorical(flights_test[category])
+
     return (flights_test, flights_train)
