@@ -1,7 +1,7 @@
 import pandas as pd
 from functions import preprocessing
 
-def load_data(test_file_path = './flights_test.csv', training_file_path = './flights_train.csv'):
+def load_data(test_file_path = './data/flights_test.csv', training_file_path = './data/flights_train.csv'):
     flights_test = pd.read_csv(test_file_path)
     flights_train = pd.read_csv(training_file_path)
 

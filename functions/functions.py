@@ -54,3 +54,10 @@ def preprocessing(x):
 def mse(actual, pred):
     actual, pred = np.array(actual), np.array(pred)
     return np.square(np.subtract(actual, pred)).mean()
+
+
+def delayed_with_margin(value):
+    if (value > 35) or (value < -35):
+        return True
+    else: 
+        return False
